@@ -25,11 +25,13 @@ Inside Node-RED there is the following flow which uses both Telegram and Alexa N
 The Desk in which the computer is connected to have its own smart plug for the monitors. When the PC is turned off and on, 
 the monitors also need to be turned on and off.
 
-The PC is refgistered as an alexa devie using the node-red-contrib-alexa-home-skill node which then feeds a function for 
-the turnOn and off requests. This then sends the apropriate command to the sleep on LAN script as well as the wake on 
+![Node-RED Flow](docs/NodeRED Flow.PNG)
+
+The PC is registered as an alexa device using the node-red-contrib-alexa-home-skill node which then feeds a function for 
+the turnOn and off requests. This then sends the appropriate command to the sleep on LAN script as well as the wake on 
 LAN node provided by Node-RED. 
 
-![Node-RED Flow](docs/NodeRED Flow.PNG)
+
 
 # Software Requirements
 The following pieces of software are required for the system to work:
@@ -40,4 +42,3 @@ The following pieces of software are required for the system to work:
 - [Windows Task Scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page)
 - [Portainer](https://www.portainer.io/)
 - [Docker](https://www.docker.com/)
-- 
