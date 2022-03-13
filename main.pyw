@@ -8,6 +8,8 @@ import socket
 " Desktop Credentials"
 HOST = '192.168.0.62'
 PORT = 60000
+
+"Logger Setup"
 logger = logging.getLogger('SOL_Logger')
 logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('D:/Users/smgib/PycharmProjects/Sleep and Wake On LAN/SOL.log')
