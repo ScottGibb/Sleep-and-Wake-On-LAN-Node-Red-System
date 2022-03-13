@@ -1,8 +1,8 @@
 # Sleep and Wake On LAN
 
 # Summary
-This project contains a system in which Node Red is used to turn on and off any Windows based PC using NodeRed and 
-python to do it. To do this, the following systems are needed:
+This project contains a system in which Node-RED is used to turn any Windows-based PC on and off using 
+python and a TCP connection. To do this, the following systems are needed:
 
 - Smart Home Agent (Alexa, Google Home)
 - [Windows Task Scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page)
@@ -15,21 +15,22 @@ architecture of the system is shown below:
 
 ![System Architecture](docs/System Architecture.png)
 
-The Task Scheduler in Windows is used to run the Python script which is waiting for a TCP socket connection and then 
-once it receives the correct command, it will put the computer to sleep. The reason Task Scheduler is used is that it
-allows the python script to always run.
+The Task Scheduler in Windows is used to run the Python script, which is waiting for a TCP socket connection and then 
+once it receives the correct command, it will put the computer to sleep. Task Scheduler is used because it
+allows the python script to run and handle starting it on boot.
 
 # Node Red Flows
 
-Inside Node-RED there is the following flow which uses both Telegram and Alexa Nodes, the reason is for this is that. 
-The Desk in which the computer is connected to have its own smart plug for the monitors. When the PC is turned off and on, 
+Inside Node-RED, there is the following flow which uses both Telegram and Alexa Nodes; the reason is for this is that. 
+The desk where the computer is connected has its own smart plug for the monitors. When the PC is turned off and on, 
 the monitors also need to be turned on and off.
 
 ![Node-RED Flow](docs/NodeRED Flow.PNG)
 
-The PC is registered as an alexa device using the node-red-contrib-alexa-home-skill node which then feeds a function for 
+The PC is registered as an Alexa device using the node-red-contrib-alexa-home-skill node, which feeds a function for 
 the turnOn and off requests. This then sends the appropriate command to the sleep on LAN script as well as the wake on 
-LAN node provided by Node-RED. 
+LAN node provided by Node-RED.
+
 
 
 
