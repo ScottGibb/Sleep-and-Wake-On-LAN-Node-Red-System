@@ -13,7 +13,7 @@ The system works by using a Raspberry Pi as the central control system running N
 communicates with other Smart Home devices such as alexa and then the Windows PC running the Sleep on LAN script. The 
 architecture of the system is shown below:
 
-![System Architecture](docs/System Architecture.png)
+![System Architecture](docs/System%20Architecture.png)
 
 The Task Scheduler in Windows is used to run the Python script, which is waiting for a TCP socket connection and then 
 once it receives the correct command, it will put the computer to sleep. Task Scheduler is used because it
@@ -25,7 +25,7 @@ Inside Node-RED, there is the following flow which uses both Telegram and Alexa 
 The desk where the computer is connected has its own smart plug for the monitors. When the PC is turned off and on, 
 the monitors also need to be turned on and off.
 
-![Node-RED Flow](docs/NodeRED Flow.PNG)
+![Node-RED Flow](docs/NodeRED%20Flow.PNG)
 
 The PC is registered as an Alexa device using the node-red-contrib-alexa-home-skill node, which feeds a function for 
 the turnOn and off requests. This then sends the appropriate command to the sleep on LAN script as well as the wake on 
