@@ -6,13 +6,14 @@ import os
 import socket
 
 " Desktop Credentials"
-HOST = '192.168.0.62'
+HOST = '192.168.0.101'
 PORT = 60000
 
 "Logger Setup"
 logger = logging.getLogger('SOL_Logger')
 logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler('D:/Users/smgib/PycharmProjects/Sleep and Wake On LAN/SOL.log')
+PROJECT_PATH = 'D:\\Users\smgib\\Documents\\Projects\\Sleep-and-Wake-On-LAN-Node-Red-System\\'
+fh = logging.FileHandler(PROJECT_PATH + "SOL.log")
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)
 fh.setLevel(logging.DEBUG)
@@ -40,6 +41,6 @@ while True:
             if (strings[0]) == "state":
                 if (strings[1]) == "off":
                     logger.info("Putting System to sleep")
-                    os.system("rundll32.exe powrprof.dll,SetSuspendState  0,1,0")
+                    os.system("rundll32.exe powrprof.dll,SetSuspendState  0,1,0")  # Puts PC in Sleep Mode
     logger.info("Closing socket")
     sock.close()
