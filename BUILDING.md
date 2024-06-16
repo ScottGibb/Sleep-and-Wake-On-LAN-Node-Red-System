@@ -22,7 +22,12 @@ For understanding how to use the Task Scheduler, please follow the link listed b
 
 ## Wake on Lan Settings
 
+In order to set up the wake on LAN correctly, you will need to change the BIOS
+settings alongside the windows settings. The snippets below are for Windows 10
+and the ASUSPX979.
+
 ![alt text](docs/wake%20on%20lan%20settings/image.png)
+![alt text](docs/wake%20on%20lan%20settings/image-1.png)
 
 ## Useful Links
 
