@@ -14,6 +14,16 @@ accidental pings waking up the PC
 
 For understanding how to use the Task Scheduler, please follow the link listed below:
 
+## Sleep on Lan Task Scheduler
+
+![alt text](docs/task%20scheduler%20screenshots/image.png)
+![alt text](docs/task%20scheduler%20screenshots/image-1.png)
+![alt text](docs/task%20scheduler%20screenshots/image-2.png)
+
+## Wake on Lan Settings
+
+![alt text](docs/wake%20on%20lan%20settings/image.png)
+
 ## Useful Links
 
 - [Using Task Scheduler](https://www.jcchouinard.com/python-automation-using-task-scheduler/)
