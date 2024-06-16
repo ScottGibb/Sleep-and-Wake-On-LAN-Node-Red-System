@@ -5,14 +5,13 @@ import logging
 import os
 import socket
 
-" Desktop Credentials"
+# Desktop Credentials
 HOST = '192.168.0.101'
 PORT = 60000
-
-"Logger Setup"
+PROJECT_PATH = 'C:/Users/smgib_161/Documents/Projects/Sleep-and-Wake-On-LAN-Node-Red-System/'
+#Logger Setup
 logger = logging.getLogger('SOL_Logger')
 logger.setLevel(logging.DEBUG)
-PROJECT_PATH = 'D:\\Users\smgib\\Documents\\Projects\\Sleep-and-Wake-On-LAN-Node-Red-System\\'
 fh = logging.FileHandler(PROJECT_PATH + "SOL.log")
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)

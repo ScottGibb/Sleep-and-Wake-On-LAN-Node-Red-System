@@ -3,5 +3,5 @@
 :: change to your own python environment to use on your computer
 ::
 ::===============================================================
-"D:\Users\smgib\Documents\Projects\Sleep-and-Wake-On-LAN-Node-Red-System\venv\Scripts\python.exe" "D:\Users\smgib\Documents\Projects\Sleep-and-Wake-On-LAN-Node-Red-System\main.py"
+"C:\Users\smgib_161\Documents\Projects\Sleep-and-Wake-On-LAN-Node-Red-System\.venv\Scripts\pythonw.exe" "C:\Users\smgib_161\Documents\Projects\Sleep-and-Wake-On-LAN-Node-Red-System\main.py"
 pause
