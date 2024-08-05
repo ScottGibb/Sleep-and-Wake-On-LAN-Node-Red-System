@@ -1,13 +1,20 @@
 [
     {
+        "id": "df4908e3.d37578",
+        "type": "tab",
+        "label": "Desktop",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "cad29a09.a1fd78",
         "type": "wake on lan",
         "z": "df4908e3.d37578",
-        "mac": "C8-60-00-0A-16-82",
-        "host": "192.168.0.62",
+        "mac": "",
+        "host": "192.168.0.101",
         "udpport": "9",
         "name": "Desktop",
-        "x": 940,
+        "x": 840,
         "y": 120,
         "wires": []
     },
@@ -18,7 +25,9 @@
         "name": "Turn on PC",
         "props": [
             {
-                "p": "payload"
+                "p": "command",
+                "v": "TurnOnRequest",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -26,14 +35,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Start",
-        "payloadType": "msg",
-        "x": 310,
+        "x": 130,
         "y": 120,
         "wires": [
             [
-                "cad29a09.a1fd78",
-                "1937fa48.3b1016"
+                "86cbbe78.1f6ee",
+                "e5ae503.a856fb"
             ]
         ]
     },
@@ -46,89 +53,12 @@
         "tosidebar": true,
         "console": true,
         "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 960,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "5603111c.82075",
-        "type": "telegram command",
-        "z": "df4908e3.d37578",
-        "name": "Turn On PC",
-        "command": "/turnonpc",
-        "bot": "475f8b28.cae814",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 310,
-        "y": 180,
-        "wires": [
-            [
-                "758b4566.ade3ac",
-                "cad29a09.a1fd78",
-                "26709b83.ab4664",
-                "1937fa48.3b1016"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "185528f7.325647",
-        "type": "telegram receiver",
-        "z": "df4908e3.d37578",
-        "name": "DebugLogger",
-        "bot": "475f8b28.cae814",
-        "saveDataDir": "",
-        "filterCommands": true,
-        "x": 750,
-        "y": 460,
-        "wires": [
-            [
-                "3f47ad04.f85182"
-            ],
-            [
-                "2ddff8f9.64fae8"
-            ]
-        ]
-    },
-    {
-        "id": "3f47ad04.f85182",
-        "type": "debug",
-        "z": "df4908e3.d37578",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 960,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "2ddff8f9.64fae8",
-        "type": "debug",
-        "z": "df4908e3.d37578",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 960,
-        "y": 500,
+        "x": 1150,
+        "y": 280,
         "wires": []
     },
     {
@@ -138,7 +68,9 @@
         "name": "Turn Off PC",
         "props": [
             {
-                "p": "payload"
+                "p": "command",
+                "v": "TurnOffRequest",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -146,56 +78,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Start",
-        "payloadType": "msg",
-        "x": 310,
-        "y": 580,
+        "x": 130,
+        "y": 600,
         "wires": [
             [
-                "38f1f206.a5a07e",
-                "2e64b58f.65036a"
+                "86cbbe78.1f6ee",
+                "e5ae503.a856fb"
             ]
-        ]
-    },
-    {
-        "id": "6a1f4769.55f6e8",
-        "type": "debug",
-        "z": "df4908e3.d37578",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 960,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "3dae8f85.c2f19",
-        "type": "telegram command",
-        "z": "df4908e3.d37578",
-        "name": "Turn Off PC",
-        "command": "/turnoffpc",
-        "bot": "475f8b28.cae814",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 310,
-        "y": 640,
-        "wires": [
-            [
-                "6a1f4769.55f6e8",
-                "38f1f206.a5a07e",
-                "92274fb3.b366b",
-                "2e64b58f.65036a"
-            ],
-            []
         ]
     },
     {
@@ -205,80 +94,17 @@
         "name": "Construct Payload",
         "func": "msg.payload = \"state:off\\n\"\nreturn msg",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 690,
-        "y": 580,
+        "y": 560,
         "wires": [
             [
-                "bb58e183.11c7c",
                 "bdfc2095.4e93d"
             ]
-        ]
-    },
-    {
-        "id": "26709b83.ab4664",
-        "type": "function",
-        "z": "df4908e3.d37578",
-        "name": "Construct Payload",
-        "func": "msg.payload.content = \"PC Turning on...\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 690,
-        "y": 300,
-        "wires": [
-            [
-                "facd542a.15de28"
-            ]
-        ]
-    },
-    {
-        "id": "facd542a.15de28",
-        "type": "telegram sender",
-        "z": "df4908e3.d37578",
-        "name": "Send Return Message",
-        "bot": "475f8b28.cae814",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 980,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "92274fb3.b366b",
-        "type": "function",
-        "z": "df4908e3.d37578",
-        "name": "Construct Payload",
-        "func": "msg.payload.content = \"PC Turning off...\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 690,
-        "y": 700,
-        "wires": [
-            [
-                "bb58e183.11c7c"
-            ]
-        ]
-    },
-    {
-        "id": "bb58e183.11c7c",
-        "type": "telegram sender",
-        "z": "df4908e3.d37578",
-        "name": "Send Return Message",
-        "bot": "475f8b28.cae814",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 980,
-        "y": 700,
-        "wires": [
-            []
         ]
     },
     {
@@ -287,8 +113,8 @@
         "z": "df4908e3.d37578",
         "name": "Turns off PC and Desk",
         "info": "",
-        "x": 340,
-        "y": 540,
+        "x": 120,
+        "y": 560,
         "wires": []
     },
     {
@@ -297,7 +123,7 @@
         "z": "df4908e3.d37578",
         "name": "Turns on PC and Desk",
         "info": "",
-        "x": 340,
+        "x": 120,
         "y": 80,
         "wires": []
     },
@@ -346,11 +172,18 @@
         "wires": [
             [
                 "cad29a09.a1fd78",
-                "1937fa48.3b1016"
+                "be0b46d3af3b18a4",
+                "55153989933299ec",
+                "3682734b21416c68",
+                "d0b45c11963da49f",
+                "76742fef234e782d"
             ],
             [
                 "38f1f206.a5a07e",
-                "2e64b58f.65036a"
+                "2e64b58f.65036a",
+                "24c509c82725cb93",
+                "2e8fc278686bde96",
+                "76742fef234e782d"
             ]
         ]
     },
@@ -358,14 +191,15 @@
         "id": "bdfc2095.4e93d",
         "type": "tcp out",
         "z": "df4908e3.d37578",
-        "host": "192.168.0.62",
+        "name": "PC",
+        "host": "192.168.0.101",
         "port": "60000",
         "beserver": "client",
         "base64": false,
         "end": true,
-        "name": "PC TCP",
-        "x": 940,
-        "y": 580,
+        "tls": "",
+        "x": 1090,
+        "y": 560,
         "wires": []
     },
     {
@@ -373,7 +207,7 @@
         "type": "debug",
         "z": "df4908e3.d37578",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": true,
         "tostatus": true,
@@ -384,50 +218,6 @@
         "x": 310,
         "y": 440,
         "wires": []
-    },
-    {
-        "id": "1937fa48.3b1016",
-        "type": "alexa-remote-smarthome",
-        "z": "df4908e3.d37578",
-        "name": "Desk On",
-        "account": "8a5dc963.060ea8",
-        "config": {
-            "option": "action",
-            "value": [
-                {
-                    "entity": "b0806759-5629-4d90-831b-6587c1f6a946",
-                    "action": "turnOn"
-                }
-            ]
-        },
-        "outputs": 1,
-        "x": 940,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7d39f141.7a6a3",
-        "type": "alexa-remote-smarthome",
-        "z": "df4908e3.d37578",
-        "name": "Desk Off",
-        "account": "8a5dc963.060ea8",
-        "config": {
-            "option": "action",
-            "value": [
-                {
-                    "entity": "b0806759-5629-4d90-831b-6587c1f6a946",
-                    "action": "turnOff"
-                }
-            ]
-        },
-        "outputs": 1,
-        "x": 940,
-        "y": 640,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2e64b58f.65036a",
@@ -444,59 +234,237 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "allowrate": false,
+        "outputs": 1,
         "x": 660,
-        "y": 640,
+        "y": 620,
         "wires": [
             [
-                "7d39f141.7a6a3"
+                "bd27d370f7b046a2"
             ]
         ]
     },
     {
-        "id": "475f8b28.cae814",
-        "type": "telegram bot",
-        "botname": "GibbSmartHome",
-        "usernames": "ScottGibb",
-        "chatids": "903197994",
-        "baseapiurl": "",
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksport": "6667",
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "botpath": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "sslterminated": false,
-        "verboselogging": false
+        "id": "13948fe191c754d6",
+        "type": "kasa",
+        "z": "df4908e3.d37578",
+        "name": "Desk",
+        "device": "192.168.0.87",
+        "interval": 60000,
+        "eventInterval": "1500",
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be0b46d3af3b18a4",
+        "type": "function",
+        "z": "df4908e3.d37578",
+        "name": "Construct Payload",
+        "func": "msg = {}\nmsg.payload = true\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 180,
+        "wires": [
+            [
+                "13948fe191c754d6",
+                "758b4566.ade3ac"
+            ]
+        ]
+    },
+    {
+        "id": "dc68ee33b723d0af",
+        "type": "kasa",
+        "z": "df4908e3.d37578",
+        "name": "Desk",
+        "device": "192.168.0.87",
+        "interval": 60000,
+        "eventInterval": "1500",
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 1090,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd27d370f7b046a2",
+        "type": "function",
+        "z": "df4908e3.d37578",
+        "name": "Construct Payload",
+        "func": "msg = {}\nmsg.payload = false\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "dc68ee33b723d0af",
+                "758b4566.ade3ac"
+            ]
+        ]
+    },
+    {
+        "id": "2e8fc278686bde96",
+        "type": "delay",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "6",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 680,
+        "wires": [
+            [
+                "bd27d370f7b046a2"
+            ]
+        ]
+    },
+    {
+        "id": "24c509c82725cb93",
+        "type": "delay",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "7",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 720,
+        "wires": [
+            [
+                "bd27d370f7b046a2"
+            ]
+        ]
+    },
+    {
+        "id": "55153989933299ec",
+        "type": "delay",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "be0b46d3af3b18a4"
+            ]
+        ]
+    },
+    {
+        "id": "3682734b21416c68",
+        "type": "delay",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 300,
+        "wires": [
+            [
+                "be0b46d3af3b18a4"
+            ]
+        ]
+    },
+    {
+        "id": "d0b45c11963da49f",
+        "type": "delay",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 340,
+        "wires": [
+            [
+                "be0b46d3af3b18a4"
+            ]
+        ]
+    },
+    {
+        "id": "76742fef234e782d",
+        "type": "debug",
+        "z": "df4908e3.d37578",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 650,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "81461b04.a7b598",
         "type": "alexa-home-conf",
-        "z": "",
         "username": "ScottGibb98"
-    },
-    {
-        "id": "8a5dc963.060ea8",
-        "type": "alexa-remote-account",
-        "z": "",
-        "name": "Scott Gibb",
-        "authMethod": "proxy",
-        "proxyOwnIp": "192.168.0.68",
-        "proxyPort": "3456",
-        "cookieFile": "out.txt",
-        "refreshInterval": "3",
-        "alexaServiceHost": "alexa.amazon.co.uk",
-        "amazonPage": "amazon.co.uk",
-        "acceptLanguage": "en-UK",
-        "userAgent": "",
-        "useWsMqtt": "on",
-        "autoInit": "on"
     }
 ]
