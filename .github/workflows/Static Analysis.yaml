@@ -37,6 +37,7 @@ jobs:
       - name: Install pylint
         run: |
           pip install pylint
+          pip install -r requierements.txt
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run pylint

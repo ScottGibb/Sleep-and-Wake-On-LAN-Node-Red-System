@@ -6,7 +6,6 @@ import logging
 import os
 import socket
 import sys
-import time
 import pidfile
 
 # Desktop Credentials
@@ -32,9 +31,9 @@ except pidfile.AlreadyRunningError:
     logger.error('Sleep on LAN Script already running, Aborting!')
     sys.exit(-1)
 
-error_count = 0
+ERROR_COUNT = 0
 while True:
-    if error_count > MAX_ERRORS:
+    if ERROR_COUNT > MAX_ERRORS:
         logger.error(f'Sleep on LAN Script reached max error count {MAX_ERRORS}')
         logger.error("System Exiting")
         sys.exit(-2)
@@ -47,7 +46,7 @@ while True:
                 sock.bind((HOST, PORT))
                 logger.info(f"Binded on port {PORT}")
                 logger.info(f"Attempting to listen on port {PORT}")
-                error_count = 0
+                ERROR_COUNT = 0
                 sock.listen()
                 logger.info("Listening on Port 60000")
                 conn, addr = sock.accept()
@@ -74,5 +73,5 @@ while True:
     except Exception as e:
         logger.error(e)
     logger.warning("Python code has reached end of script, the code will no logner talk to Node-Red")
-    logger.info(f"Attempting to restart loop! Error Number: {error_count}")
-    error_count = error_count+1
+    logger.info(f"Attempting to restart loop! Error Number: {ERROR_COUNT}")
+    ERROR_COUNT = ERROR_COUNT+1
