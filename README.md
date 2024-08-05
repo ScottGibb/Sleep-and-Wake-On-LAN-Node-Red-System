@@ -27,7 +27,7 @@ Inside Node-RED, there is the following flow which uses both Telegram and Alexa 
 The desk where the computer is connected has its own smart plug for the monitors. When the PC is turned off and on,
 the monitors also need to be turned on and off.
 
-![Node-RED Flow](docs/NodeRED%20Flow.PNG)
+![Node-RED Flow](docs/NodeRED%20Flow.png)
 
 The PC is registered as an Alexa device using the node-red-contrib-alexa-home-skill node, which feeds a function for
 the turnOn and off requests. This then sends the appropriate command to the sleep on LAN script as well as the wake on
