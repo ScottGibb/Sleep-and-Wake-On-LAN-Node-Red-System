@@ -37,10 +37,10 @@ jobs:
       - name: Install pylint
         run: |
           pip install pylint
-          pip install -r requirements.txt
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run pylint
         run: |
+          pip install -r requirements.txt
           echo "Checking Python files with pylint"
           pylint --fail-under=9 **.py
