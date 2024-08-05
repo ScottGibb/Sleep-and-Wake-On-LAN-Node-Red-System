@@ -10,7 +10,7 @@
         "id": "cad29a09.a1fd78",
         "type": "wake on lan",
         "z": "df4908e3.d37578",
-        "mac": "",
+        "mac": "C8-60-00-0A-16-82",
         "host": "192.168.0.101",
         "udpport": "9",
         "name": "Desktop",
