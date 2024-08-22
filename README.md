@@ -3,6 +3,8 @@
 [![Static Analysis](https://github.com/ScottGibb/Sleep-and-Wake-On-LAN-Node-Red-System/actions/workflows/Static%20Analysis.yaml/badge.svg)](https://github.com/ScottGibb/Sleep-and-Wake-On-LAN-Node-Red-System/actions/workflows/Static%20Analysis.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![Languages and Tools](./docs/Languages%20and%20Tools.png)
+
 ## Summary
 
 This project contains a system in which Node-RED is used to turn any Windows-based PC on and off using
