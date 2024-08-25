@@ -38,8 +38,15 @@ and the ASUSPX979.
 ![alt text](docs/wake%20on%20lan%20settings/image.png)
 ![alt text](docs/wake%20on%20lan%20settings/image-1.png)
 
+## Issues with the computer not responding to Wake on LAN Packets
+
+Sometimes the PC will not respond properly to WoLAN Packets, this could be causes by the PC entering hibernation. This is a kind of deep sleep in which the PC wont respond to the packets to prevent it follow this screenshot:
+
+![Fast Boot Settings](./docs/wake%20on%20lan%20settings/fast-boot-settings.png)
+
 ## Useful Links
 
 - [Using Task Scheduler](https://www.jcchouinard.com/python-automation-using-task-scheduler/)
 - [Enabling Wake on LAN](https://www.windowscentral.com/how-enable-and-use-wake-lan-wol-windows-10)
 - [Bash Script and Task Scheduler](https://www.tutorialspoint.com/batch_script/batch_script_comments.htm)
+- [Not Responding to Wake On LAN Packets](https://serverfault.com/questions/1018470/wol-and-wow-does-not-work-after-a-certain-time)
