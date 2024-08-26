@@ -44,6 +44,17 @@ Sometimes the PC will not respond properly to WoLAN Packets, this could be cause
 
 ![Fast Boot Settings](./docs/wake%20on%20lan%20settings/fast-boot-settings.png)
 
+### Disabling Link State Power Management
+
+Another feature that might interrupt the sleep Link State Power Management. It can be disabled by doing the following:
+
+![Link Power Management](./docs/wake%20on%20lan%20settings/Disabling-link-power-management.png)
+
+### ChatGPT Extract for Power Issues
+
+Read the conversation [here](./ChatGptExtract.md)
+
+
 ## Useful Links
 
 - [Using Task Scheduler](https://www.jcchouinard.com/python-automation-using-task-scheduler/)
