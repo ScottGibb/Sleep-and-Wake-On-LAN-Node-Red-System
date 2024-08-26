@@ -64,7 +64,7 @@ while True:
                             logger.info("Closing socket")
                             sock.close()
                             logger.info("Turning PC off")
-                            os.system("rundll32.exe powrprof.dll,SetSuspendState  0,1,0")
+                            os.system("Rundll32.exe Powrprof.dll,SetSuspendState Sleep") # Put PC to Sleep NOT Hibernate
                             # os.system("shutdown /s /t 0")
                     else:
                         logger.info("Closing socket")

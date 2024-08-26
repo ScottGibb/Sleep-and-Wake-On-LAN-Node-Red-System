@@ -50,6 +50,12 @@ Another feature that might interrupt the sleep Link State Power Management. It c
 
 ![Link Power Management](./docs/wake%20on%20lan%20settings/Disabling-link-power-management.png)
 
+### Disabling Power off Hard Drive
+
+Another recommended thing I found was to disable the power off hard drive feature
+
+![Power Off Hard Drive](./docs/wake%20on%20lan%20settings/power-off-hard-drive.png)
+
 ### ChatGPT Extract for Power Issues
 
 Read the conversation [here](./ChatGptExtract.md)
