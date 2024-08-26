@@ -54,7 +54,6 @@ Another feature that might interrupt the sleep Link State Power Management. It c
 
 Read the conversation [here](./ChatGptExtract.md)
 
-
 ## Useful Links
 
 - [Using Task Scheduler](https://www.jcchouinard.com/python-automation-using-task-scheduler/)
