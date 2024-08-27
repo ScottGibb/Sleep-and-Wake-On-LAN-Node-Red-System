@@ -60,6 +60,30 @@ Another recommended thing I found was to disable the power off hard drive featur
 
 Read the conversation [here](./ChatGptExtract.md)
 
+### NetBIOS over TCP/IP
+
+Another settings that may need to be set in Windows is the NetBIOS over TCP/IP settings it can be done through advanced TCP/IP Settings:
+
+![alt text](./docs/wake%20on%20lan%20settings/netbios-settings.png)
+
+### Setting Network to Private
+
+Some people on reddit reported that their network had to be set to private in order for the wake on LAN packet to work:
+
+![alt text](./docs/wake%20on%20lan%20settings/private-network.png)
+
+#### Adding a Rule to the Firewall to allow TCP Connections
+
+When setting the network to private I noticed that the firewall prevented the TCP port from opening and thus I had to make a rule to allow connections on that port:
+
+![alt text](./docs/wake%20on%20lan%20settings/windows-firewall.png)
+
+### Using the Broadcast address for wake on LAN
+
+Finally, another reddit post reported that the wake on LAN packet was not being sent due to the router forgetting the IP address, this shouldnt happen as my PC was set to static in the router settings. However you can broadcast it to everything on the network at ```255.255.255.255```.
+
+![alt text](./docs/wake%20on%20lan%20settings/wake-on-lan-broadcast.png)
+
 ## Useful Links
 
 - [Using Task Scheduler](https://www.jcchouinard.com/python-automation-using-task-scheduler/)
