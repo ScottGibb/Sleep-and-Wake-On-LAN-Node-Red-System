@@ -6,6 +6,7 @@ import logging
 import os
 import socket
 import sys
+import time
 import pidfile
 
 # Desktop Credentials
@@ -72,6 +73,8 @@ while True:
 
     except Exception as e:
         logger.error(e)
-    logger.warning("Python code has reached end of script, the code will no logner talk to Node-Red")
+    logger.warning("Python code has reached end of script, "
+                   "the code will no longer talk to Node-Red")
     logger.info(f"Attempting to restart loop! Error Number: {ERROR_COUNT}")
+    time.sleep(5) # Sleep for 5 seconds before restarting loop, the ip address might not exist yet
     ERROR_COUNT = ERROR_COUNT+1
